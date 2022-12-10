@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Aarón Orozco Fernández">
+		<!--Título-->
+		<title>Ejercicio 6</title>
+		
+		 <!--Hoja de estilo css-->
+		<link rel="stylesheet" type="text/css" href="Ejercicio6.css">
+	
+	</head>
+	<body>
+		
+		<header>
+				<nav>
+					<a title="crear" tabindex="1" accesskey="a" href="Ejercicio6.php#crear"> Crer BD </a>
+					<a title="tabla" tabindex="2" accesskey="b" href="Ejercicio6.php#tabla"> Crear Tabla </a>
+					<a title="insertar" tabindex="3" accesskey="c" href="Ejercicio6.php#insertar"> Insertar </a>
+					<a title="buscar" tabindex="4" accesskey="d" href="Ejercicio6.php#buscar"> Buscar </a>
+					<a title="modificar" tabindex="5" accesskey="e" href="Ejercicio6.php#modificar"> Modificar </a>
+					<a title="eliminar" tabindex="6" accesskey="f" href="Ejercicio6.php#eliminar"> Eliminar </a>
+					<a title="generar" tabindex="7" accesskey="g" href="Ejercicio6.php#generar"> Generar </a>
+					<a title="cargar" tabindex="8" accesskey="h" href="Ejercicio6.php#cargar"> Cargar </a>
+					<a title="exportar" tabindex="9" accesskey="i" href="Ejercicio6.php#exportar"> Exportar </a>
+				</nav>
+		</header>
+	
+		<section id="crear">
+		<h2>Crear base de datos</h2>
+			<form action="#" method="post" name="crear">
+			<fieldset>
+			<legend>Datos:</legend>
+				<input type="submit" value="Crear Base de Datos" name="crear" tabindex="10" accesskey="j">
+			</fieldset>
+			</form>
+				</section>
+	
+		<section id="tabla">
+		<h2>Crear Tabla</h2>
+			<form action="#" method="post" name="tabla">
+			<fieldset>
+			<legend>Datos:</legend>
+				<input type="submit" value="Crear Tabla" name="tabla" tabindex="11" accesskey="k">
+			</fieldset>
+	
+			</form>
+	
+				</section>
+		
+		
+		<section id="insertar">
+		<h2>Insertar datos para tabla</h2>
+			<form action="#" method="post" name="insercion">
+			<fieldset>
+			<legend>Datos:</legend>
+				<label>DNI: <input type="text" name="dnii"></label>  
+				<label>Nombre: <input type="text" name="nombrei"></label>  
+				<label>Apellidos: <input type="text" name="apellidosi"></label>  
+				<label>Email: <input type="email" name="emaili"></label>  
+				<label>Teléfono: <input type="tel" name="telefonoi"></label>  
+				<label>Edad: <input type="number" min="0" name="edadi"></label>  
+				<label>Sexo Femenino: <input type="radio" name="sexoi" value="femenino" checked=""></label>  
+				<label>Sexo Masculino: <input type="radio" name="sexoi" value="Masculino"></label>
+				<label>Sexo Otro: <input type="radio" name="sexoi" value="Otro"></label>  
+				<label>Nivel: <input type="number" min="0" max="10" name="niveli"></label>  
+				<label>Tiempo en segundos: <input type="number" min="1" name="tiempoi"></label>  
+				<label>Actividad realizada: <input type="radio" name="correctai" value="si" checked=""></label>  
+				<label>Actividad NO realizada: <input type="radio" name="correctai" value="no"></label>  
+				<label>Comentario: <input type="text" name="comentarioi"></label>  
+				<label>Propuestas: <input type="text" name="propuestai"></label>  
+				<label>Valoración: <input type="number" min="0" max="10" name="valoracioni"></label>  
+	
+				<input type="submit" value="Insertar datos introducidos" name="insertarEnTabla" tabindex="12" accesskey="l">
+			</fieldset>
+			</form>
+				</section>
+	
+		<section id="eliminar">
+		<h2>Eliminar datos de la tabla</h2>
+			<form action="#" method="post" name="eliminar">
+			<fieldset>
+				<legend>Datos:</legend>
+				<label>DNI: <input type="text" name="dnib"></label>  
+				<input type="submit" value="Borrar persona" name="borrarEnTabla" tabindex="13" accesskey="m">
+				<input type="submit" value="Borrar toda la tabla" name="borrarTodo" tabindex="20" accesskey="t">
+			</fieldset>
+	
+			</form>
+				</section>
+	
+		<section id="buscar"> 
+		<h2>Buscar datos de la tabla</h2>
+			<form action="#" method="post" name="buscar">
+			<fieldset>
+				<legend>Datos:</legend>
+				<label>DNI: <input type="text" name="dnibus"></label>  
+				<input type="submit" value="Buscar persona con dni" name="buscarEnTabla" tabindex="14" accesskey="n">
+				<input type="submit" value="Buscar todas las personas" name="buscar" tabindex="15" accesskey="o">
+			</fieldset>
+	
+			</form>
+			<h3>Resultado de la operación:</h3><p>Los datos en la tabla 'PruebasUsabilidad' son: </p><p>Número de filas = 4</p><ul><li>dni - nombre - apellidos - email - telefono - edad - sexo - nivel - tiempo - correcta - comentario - propuesta - valoracion</li><li>1111 - Pepa - Espinosa - espinosa@gmail.com - 0 - 45 - femenino - 4 - 68 - si - comentario pepa - propuesta pepa - 5</li><li>123434243 - Gloria - Alvarez - asdasdasd@gmail.com - 679345678 - 12 - femenino - 8 - 231 - si - comentario gloria - propuesta gloria - 6</li><li>44446 - Mario - Martins - uo283456@uniovi.es - 123456789 - 19 - otro - 7 - 8 - si - comentario mario - propuesta mario - 10</li><li>676767676 - Aaron - Orozco Fern?ndez - uo281997@uniovi.es - 123456789 - 21 - masculino - 2 - 12 - no - comentario aaron - propuesta aaron - 2</li></ul>
+		</section>
+	
+	
+		<section id="modificar">
+		<h2>Modificar datos de la tabla</h2>
+			<form action="#" method="post" name="modificar">
+				<fieldset>
+					<legend>Datos:</legend>
+					<label>DNI de la persona a la que modificar: <input type="text" name="dnim"></label>
+					<label>Nombre: <input type="text" name="nombrem"></label>  
+					<label>Apellidos: <input type="text" name="apellidosm"></label>  
+					<label>Email: <input type="email" name="emailm"></label>  
+					<label>Teléfono: <input type="tel" name="telefonom"></label>  
+					<label>Edad: <input type="number" min="0" name="edadm"></label>  
+					<label>Sexo Femenino: <input type="radio" name="sexom" value="Femenino" checked=""></label>  
+					<label>Sexo Masculino: <input type="radio" name="sexom" value="Masculino"></label>
+					<label>Sexo Otro: <input type="radio" name="sexom" value="Otro"></label>  
+					<label>Nivel: <input type="number" min="0" max="10" name="nivelm"></label>  
+					<label>Tiempo en segundos: <input type="number" min="1" name="tiempom"></label>  
+					<label>Actividad realizada: <input type="radio" value="si" name="correctam" checked=""></label>  
+					<label>Actividad NO realizada: <input type="radio" value="no" name="correctam"></label>  
+					<label>Comentario: <input type="text" name="comentariom"></label>  
+					<label>Propuestas: <input type="text" name="propuestam"></label>  
+					<label>Valoración: <input type="number" min="0" max="10" name="valoracionm"></label>    
+					<input type="submit" value="Modficar persona" name="modificarEnTabla" tabindex="16" accesskey="p">
+				</fieldset>
+			</form>
+				</section>
+	
+		<section id="generar">
+		<h2>Generar Informe</h2>
+			<form action="#" method="post" name="generar">
+			<fieldset>
+				<legend>Genarar:</legend>
+				<input type="submit" value="Generar Informe" name="generar" tabindex="17" accesskey="q">
+			</fieldset>
+			</form>
+				</section>
+	
+		<section id="cargar">
+		<h2>Cargar datos de CSV</h2>
+			<form action="#" method="post" name="cargar">
+			<fieldset>
+				<legend>Cargar:</legend>
+				<input type="submit" value="Cargar" name="cargar" tabindex="18" accesskey="r">
+			</fieldset>
+			</form>
+				</section>
+			
+	
+		<section id="exportar">
+		<h2>Exportar datos a CSV</h2>
+			<form action="#" method="post" name="exportar">
+			<fieldset>
+				<legend>Exportar:</legend>
+				<input type="submit" value="Exportar" name="exportar" tabindex="19" accesskey="s">
+			</fieldset>
+			</form>
+				</section>
+	
+	
+	
+	
+	
+	</body>
+</html>
