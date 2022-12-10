@@ -1,0 +1,100 @@
+/**************************
+Aarón Orozco Fernández - UO281997
+Hoja de estilo donde se añade color, fuentes y estilo a los diferentes componentes del sitio web
+**************************/
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+  background-color: rgb(0, 55, 65);
+  border:5em;
+}
+
+header{
+  width: 100%;
+  color: #ffffff;
+  background-color: rgb(0, 159, 187);
+  margin: 1em;
+}
+
+
+header>nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: rgb(0, 159, 187);
+  grid-gap: 3em;
+  padding: 1em;
+  border: 1em;
+  margin: 1em
+}
+
+a{
+  color: #ffffff;
+  background-color: rgb(0, 159, 187);
+  font-family: Tahoma, sans-serif;
+  padding: 1em 1em;
+  border: 1em solid;
+  border-radius: 1em;
+  text-decoration:none;
+}
+
+
+/*Especificidad 011*/
+input[type="submit"]{
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+  border-right: 1em;
+}
+
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  font-size: large;
+  color: #000000;
+  background-color: rgb(230, 255, 140);
+  padding: 1em;
+  border: 1em;
+  margin: 1em
+}
+
+section>form{
+  display: grid;
+  grid-template-columns: 5em 5em 5em 5em 5em;
+  font-family: Tahoma, sans-serif;
+  justify-content: center;
+  grid-gap: 1em;
+  width: 100%;
+  height: auto;
+}
+
+/*Especificidad 001*/
+form>h2{
+  color: #000000;
+  background-color: rgb(230, 255, 140);
+  font-size: xx-large;
+  border: 0.5em;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+form>input[type="submit"]{
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+
+form>label{
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
