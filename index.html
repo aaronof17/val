@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Aarón Orozco Fernández">
+		<!--Título-->
+		<title>Ejercicio 7</title>
+		
+		 <!--Hoja de estilo css-->
+		<link rel="stylesheet" type="text/css" href="Ejercicio7.css">
+	
+	</head>
+	<body>
+		object(BaseDatosEjercicio7)#19 (25) {
+	  ["servername"]=&gt;
+	  string(14) "localhost:3307"
+	  ["username"]=&gt;
+	  string(10) "DBUSER2022"
+	  ["password"]=&gt;
+	  string(10) "DBPSWD2022"
+	  ["database"]=&gt;
+	  string(4) "e7bd"
+	  ["db"]=&gt;
+	  object(mysqli)#20 (4) {
+		["client_info"]=&gt;
+		string(14) "mysqlnd 8.1.10"
+		["client_version"]=&gt;
+		int(80110)
+		["connect_errno"]=&gt;
+		int(0)
+		["connect_error"]=&gt;
+		NULL
+	  }
+	  ["dbcadenaSQL"]=&gt;
+	  string(58) "CREATE DATABASE IF NOT EXISTS e7bd COLLATE utf8_spanish_ci"
+	  ["crearCliente"]=&gt;
+	  string(187) "CREATE TABLE IF NOT EXISTS Cliente ( 
+								dni_cli VARCHAR(9) NOT NULL,
+								nombre_cli VARCHAR(255) NOT NULL, 
+								nutri_dni VARCHAR(9) NOT NULL,
+								PRIMARY KEY (dni_cli))"
+	  ["crearMaquina"]=&gt;
+	  string(142) "CREATE TABLE IF NOT EXISTS Maquina ( 
+						id_maquina VARCHAR(9) NOT NULL,
+						cli_dni VARCHAR(9) NOT NULL,
+						PRIMARY KEY (id_maquina))"
+	  ["crearNutricionista"]=&gt;
+	  string(145) "CREATE TABLE IF NOT EXISTS Nutricionista ( 
+						dni_nu VARCHAR(9) NOT NULL,
+						nombre_nu VARCHAR(255) NOT NULL, 
+						PRIMARY KEY (dni_nu))"
+	  ["crearEntrenador"]=&gt;
+	  string(142) "CREATE TABLE IF NOT EXISTS Entrenador ( 
+						dni_en VARCHAR(9) NOT NULL,
+						nombre_en VARCHAR(255) NOT NULL, 
+						PRIMARY KEY (dni_en))"
+	  ["crearPlan"]=&gt;
+	  string(155) "CREATE TABLE IF NOT EXISTS Plan ( 
+						en_dniplan VARCHAR(9) NOT NULL,
+						cli_dniplan VARCHAR(9) NOT NULL,
+						PRIMARY KEY (en_dniplan,cli_dniplan))"
+	  ["clientes"]=&gt;
+	  object(mysqli_result)#21 (0) {
+	  }
+	  ["nutricionistas"]=&gt;
+	  object(mysqli_result)#22 (0) {
+	  }
+	  ["maquinas"]=&gt;
+	  object(mysqli_result)#23 (0) {
+	  }
+	  ["entrenadores"]=&gt;
+	  object(mysqli_result)#24 (0) {
+	  }
+	  ["planes"]=&gt;
+	  object(mysqli_result)#25 (0) {
+	  }
+	  ["fila"]=&gt;
+	  int(3)
+	  ["gestor"]=&gt;
+	  int(0)
+	  ["datos"]=&gt;
+	  bool(false)
+	  ["numero"]=&gt;
+	  int(2)
+	  ["array_datos"]=&gt;
+	  array(2) {
+		[0]=&gt;
+		string(4) "8989"
+		[1]=&gt;
+		string(3) "999"
+	  }
+	  ["c"]=&gt;
+	  int(2)
+	  ["consultaPre"]=&gt;
+	  object(mysqli_stmt)#26 (0) {
+	  }
+	  ["row"]=&gt;
+	  NULL
+	  ["pruebaresul"]=&gt;
+	  object(mysqli_result)#27 (0) {
+	  }
+	}
+	
+		<header>
+				<nav>
+					<a title="crear" tabindex="1" accesskey="a" href="Ejercicio7.php#crear"> Crer BD </a>
+					<a title="tabla" tabindex="2" accesskey="b" href="Ejercicio7.php#tabla"> Crear Tabla </a>
+					<a title="insertar" tabindex="3" accesskey="c" href="Ejercicio7.php#insertar"> Insertar Cliente </a>
+					<a title="buscar" tabindex="4" accesskey="d" href="Ejercicio7.php#buscar"> Buscar </a>
+					<a title="eliminar" tabindex="6" accesskey="f" href="Ejercicio7.php#eliminar"> Vaciar Maquina </a>
+					<a title="entrar" tabindex="6" accesskey="f" href="Ejercicio7.php#entrar"> Entrar a Maquina </a>
+					<a title="cargar" tabindex="8" accesskey="h" href="Ejercicio7.php#cargar"> Cargar </a>
+				</nav>
+		</header>
+	
+		<section id="crear">
+		<h2>Crear base de datos</h2>
+			<form action="#" method="post" name="crear">
+			<fieldset>
+			<legend>Datos:</legend>
+				<input type="submit" value="Crear Base de Datos" name="crear" tabindex="10" accesskey="j">
+			</fieldset>
+			</form>
+				</section>
+	
+		<section id="tabla">
+		<h2>Crear Tabla</h2>
+			<form action="#" method="post" name="tabla">
+			<fieldset>
+			<legend>Datos:</legend>
+				<input type="submit" value="Crear Tabla" name="tabla" tabindex="11" accesskey="k">
+			</fieldset>
+	
+			</form>
+	
+				</section>
+	
+		<section id="cargar">
+		<h2>Cargar datos de CSV</h2>
+			<form action="#" method="post" name="cargar">
+			<fieldset>
+				<legend>Cargar:</legend>
+				<input type="submit" value="Cargar" name="cargar" tabindex="18" accesskey="r">
+			</fieldset>
+			</form>
+				</section>
+		
+		
+		<section id="insertar">
+		<h2>Insertar cliente</h2>
+			<form action="#" method="post" name="insercion">
+			<fieldset>
+			<legend>Datos:</legend>
+				<label>DNI: <input type="text" name="dnii"></label>  
+				<label>Nombre: <input type="text" name="nombrei"></label>  
+				<label>DNI Nutricionista: <input type="text" name="nutricionistai"></label>  
+	
+				<input type="submit" value="Insertar cliente en la base de datos" name="insertarEnTabla" tabindex="12" accesskey="l">
+			</fieldset>
+			</form>
+				</section>
+	
+		<section id="añadir">
+		<h2>Añadir plan de ejercicios</h2>
+			<form action="#" method="post" name="añadir">
+			<fieldset>
+			<legend>Datos:</legend>
+				<label>DNI del cliente: <input type="text" name="clientee"></label>  
+				<label>DNI del entrenador: <input type="text" name="entrenadore"></label>  
+	
+				<input type="submit" value="Añadir plan de ejercicios al cliente" name="añadirPlan" tabindex="12" accesskey="l">
+			</fieldset>
+			</form>
+				</section>
+	
+		<section id="eliminar">
+		<h2>Cliente sale de maquina</h2>
+			<form action="#" method="post" name="eliminar">
+			<fieldset>
+				<legend>Datos:</legend>
+				<label>Id maquina: <input type="text" name="idMaquina"></label>  
+				<input type="submit" value="Vaciar maquina" name="vaciarMaquina" tabindex="13" accesskey="m">
+			</fieldset>
+	
+			</form>
+				</section>
+	
+		<section id="entrar">
+		<h2>Cliente entra a maquina</h2>
+			<form action="#" method="post" name="entrar">
+			<fieldset>
+				<legend>Datos:</legend>
+				<label>Id maquina: <input type="text" name="idMaquinae"></label>  
+				<label>Dni cliente: <input type="text" name="dnie"></label>  
+	
+				<input type="submit" value="Entrar en maquina" name="entrarMaquina" tabindex="13" accesskey="m">
+			</fieldset>
+	
+			</form>
+				</section>
+	
+		<section id="buscar"> 
+		<h2>Buscar datos del gimnasio</h2>
+			<form action="#" method="post" name="buscar">
+			<fieldset>
+				<legend>Datos:</legend>
+				<input type="submit" value="Mostrar todos los datos del gimnasio" name="buscar" tabindex="15" accesskey="o">
+			</fieldset>
+	
+			</form>
+			<h3>Resultado de la operación:</h3><p>Los datos de los clientes son: </p><p>Número de filas = 3</p><ul><li>dni - nombre - nutricionista dni</li><li>755 - Miranda - 123434243</li><li>888 - Manolo - 1111 </li><li>999 - Mario - 1111</li></ul><p>Los datos en los nutricionistas son: </p><p>Número de filas = 2</p><ul><li>dni - nombre</li><li>1111 - Paco</li><li>123434243 - Gloria</li></ul><p>Los datos de las maquinas son: </p><p>Número de filas = 2</p><ul><li>id - dni del cliente que la usa</li><li>m1 - 755</li><li>m2 - 999</li></ul><p>Los datos de los entrenadores son: </p><p>Número de filas = 2</p><ul><li>dni - nombre</li><li>666666 - Juan</li><li>8989 - Angel</li></ul><p>Los datos de los planes son: </p><p>Número de filas = 2</p><ul><li>dni entrenador - dni cliente</li><li>666666 - 888</li><li>8989 - 999</li></ul>
+		</section>
+	
+			
+	
+	
+	
+	
+	
+	</body>
+</html>
