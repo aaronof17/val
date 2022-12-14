@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Aarón Orozco Fernández">
+		<!--Título-->
+		<title>Ejercicio 7</title>
+		
+		 <!--Hoja de estilo css-->
+		<link rel="stylesheet" type="text/css" href="Ejercicio7.css">
+	
+	</head>
+	<body>
+		
+		<header>
+				<nav>
+					<a title="crear" tabindex="1" accesskey="a" href="Ejercicio7.php#crear"> Crer BD </a>
+					<a title="tabla" tabindex="2" accesskey="b" href="Ejercicio7.php#tabla"> Crear Tabla </a>
+					<a title="insertar" tabindex="3" accesskey="c" href="Ejercicio7.php#insertar"> Insertar Cliente </a>
+					<a title="buscar" tabindex="4" accesskey="d" href="Ejercicio7.php#buscar"> Buscar </a>
+					<a title="eliminar" tabindex="6" accesskey="f" href="Ejercicio7.php#eliminar"> Vaciar Maquina </a>
+					<a title="entrar" tabindex="6" accesskey="f" href="Ejercicio7.php#entrar"> Entrar a Maquina </a>
+					<a title="cargar" tabindex="8" accesskey="h" href="Ejercicio7.php#cargar"> Cargar </a>
+				</nav>
+		</header>
+	
+		<section id="crear">
+		<h2>Crear base de datos</h2>
+			<form action="#" method="post" name="crear">
+			<fieldset>
+			<legend>Datos:</legend>
+				<input type="submit" value="Crear Base de Datos" name="crear" tabindex="10" accesskey="j">
+			</fieldset>
+			</form>
+				</section>
+	
+		<section id="tabla">
+		<h2>Crear Tabla</h2>
+			<form action="#" method="post" name="tabla">
+			<fieldset>
+			<legend>Datos:</legend>
+				<input type="submit" value="Crear Tabla" name="tabla" tabindex="11" accesskey="k">
+			</fieldset>
+	
+			</form>
+	
+				</section>
+	
+		<section id="cargar">
+		<h2>Cargar datos de CSV</h2>
+			<form action="#" method="post" name="cargar">
+			<fieldset>
+				<legend>Cargar:</legend>
+				<input type="submit" value="Cargar" name="cargar" tabindex="18" accesskey="r">
+			</fieldset>
+			</form>
+				</section>
+		
+		
+		<section id="insertar">
+		<h2>Insertar cliente</h2>
+			<form action="#" method="post" name="insercion">
+			<fieldset>
+			<legend>Datos:</legend>
+				<label>DNI: <input type="text" name="dnii"></label>  
+				<label>Nombre: <input type="text" name="nombrei"></label>  
+				<label>DNI Nutricionista: <input type="text" name="nutricionistai"></label>  
+	
+				<input type="submit" value="Insertar cliente en la base de datos" name="insertarEnTabla" tabindex="12" accesskey="l">
+			</fieldset>
+			</form>
+				</section>
+	
+		<section id="añadir">
+		<h2>Añadir plan de ejercicios</h2>
+			<form action="#" method="post" name="añadir">
+			<fieldset>
+			<legend>Datos:</legend>
+				<label>DNI del cliente: <input type="text" name="clientee"></label>  
+				<label>DNI del entrenador: <input type="text" name="entrenadore"></label>  
+	
+				<input type="submit" value="Añadir plan de ejercicios al cliente" name="añadirPlan" tabindex="12" accesskey="l">
+			</fieldset>
+			</form>
+				</section>
+	
+		<section id="eliminar">
+		<h2>Cliente sale de maquina</h2>
+			<form action="#" method="post" name="eliminar">
+			<fieldset>
+				<legend>Datos:</legend>
+				<label>Id maquina: <input type="text" name="idMaquina"></label>  
+				<input type="submit" value="Vaciar maquina" name="vaciarMaquina" tabindex="13" accesskey="m">
+			</fieldset>
+	
+			</form>
+				</section>
+	
+		<section id="entrar">
+		<h2>Cliente entra a maquina</h2>
+			<form action="#" method="post" name="entrar">
+			<fieldset>
+				<legend>Datos:</legend>
+				<label>Id maquina: <input type="text" name="idMaquinae"></label>  
+				<label>Dni cliente: <input type="text" name="dnie"></label>  
+	
+				<input type="submit" value="Entrar en maquina" name="entrarMaquina" tabindex="13" accesskey="m">
+			</fieldset>
+	
+			</form>
+				</section>
+	
+		<section id="buscar"> 
+		<h2>Buscar datos del gimnasio</h2>
+			<form action="#" method="post" name="buscar">
+			<fieldset>
+				<legend>Datos:</legend>
+				<input type="submit" value="Mostrar todos los datos del gimnasio" name="buscar" tabindex="15" accesskey="o">
+			</fieldset>
+	
+			</form>
+			<h3>Resultado de la operación:</h3><p>Los datos de los clientes son: </p><p>Número de filas = 4</p><ul><li>dni - nombre - nutricionista dni</li><li>71743867J - Paquito - 123434243</li><li>755 - Miranda - 123434243</li><li>888 - Manolo - 1111 </li><li>999 - Mario - 1111</li></ul><p>Los datos en los nutricionistas son: </p><p>Número de filas = 2</p><ul><li>dni - nombre</li><li>1111 - Paco</li><li>123434243 - Gloria</li></ul><p>Los datos de las maquinas son: </p><p>Número de filas = 3</p><ul><li>id</li><li>m1</li><li>m2</li><li>m3</li></ul><p>Los datos de los usos de las maquinas son: </p><p>Número de filas = 3</p><ul><li>id - dni</li><li>m2 - 71743867J</li><li>m3 - 755</li><li>m1 - 888</li></ul><p>Los datos de los entrenadores son: </p><p>Número de filas = 2</p><ul><li>dni - nombre</li><li>666666 - Juan</li><li>8989 - Angel</li></ul><p>Los datos de los planes son: </p><p>Número de filas = 4</p><ul><li>dni entrenador - dni cliente</li><li>666666 - 755</li><li>666666 - 888</li><li>8989 - 755</li><li>8989 - 999</li></ul>
+		</section>
+	
+			
+	
+	
+	
+	
+	
+	</body>
+</html>
